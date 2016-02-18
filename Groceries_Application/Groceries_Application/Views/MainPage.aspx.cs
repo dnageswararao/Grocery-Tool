@@ -173,8 +173,8 @@ namespace Groceries_Application.Views
                             var cmd =
                                 new SqlCommand(
                                     "insert into SavePDFTable " +
-                                    "(FileName,InvoiceNo,InvoiceDate,OrderNo,CustomerNo,Item,Description,Unit,Shipped,Price,Amount)" +
-                                    "values(@filename,@invoiceno,@invoicedate,@orderno,@customername,convert(VARCHAR(max), @item),@desc,@unit,@shipped,@price,@amount)",
+                                    "(FileName,InvoiceNo,InvoiceDate,OrderNo,CustomerNo,Item,Description,Unit,Shipped,Price,Amount,VendorName)" +
+                                    "values(@filename,@invoiceno,@invoicedate,@orderno,@customername,convert(VARCHAR(max), @item),@desc,@unit,@shipped,@price,@amount,@vendorname)",
                                     cnn))
                         {
                             if (!(s.Split().Contains("UNIT") && s.Split().Contains("#")))
@@ -211,6 +211,7 @@ namespace Groceries_Application.Views
                                     cmd.Parameters.AddWithValue("@invoicedate", tableFormat1.InvoiceDate);
                                     cmd.Parameters.AddWithValue("@orderno", tableFormat1.OrderNumber);
                                     cmd.Parameters.AddWithValue("@customername", tableFormat1.CustomerNumber);
+                                    cmd.Parameters.AddWithValue("@vendorname", "Javed");
                                     if (code1.Split().Length == 2)
                                     {
                                         cmd.Parameters.AddWithValue("@desc",
@@ -330,7 +331,7 @@ namespace Groceries_Application.Views
                                 cmd.Parameters.AddWithValue("@shipped", "");
                                 cmd.Parameters.AddWithValue("@price", "");
                                 cmd.Parameters.AddWithValue("@amount", "");
-                                cmd.Parameters.AddWithValue("@pdfprice", "");
+                                //cmd.Parameters.AddWithValue("@pdfprice", "");
                             }
                         }
                     }
@@ -360,8 +361,8 @@ namespace Groceries_Application.Views
                         using (var cmdfmt =
                             new SqlCommand(
                                 "insert into PDFFormatTable2 " +
-                                "(FileName,InvoiceNo,InvoiceDate,Shipped,Unit,Item,Description,Price,Amount)" +
-                                "values(@filename,@invoiceno,@invoicedate,@shipped,@unit,convert(VARCHAR(max), @item),@desc,@price,@amount)",
+                                "(FileName,InvoiceNo,InvoiceDate,Shipped,Unit,Item,Description,Price,Amount,VendorName)" +
+                                "values(@filename,@invoiceno,@invoicedate,@shipped,@unit,convert(VARCHAR(max), @item),@desc,@price,@amount,@vendorname)",
                                 cnn))
                         {
 
@@ -447,20 +448,31 @@ namespace Groceries_Application.Views
                                 cmdfmt.Parameters.AddWithValue("@invoicedate", tableFormat2.InvoiceDate);
                                 cmdfmt.Parameters.AddWithValue("@shipped", tableFormat2.Shipped);
                                 cmdfmt.Parameters.AddWithValue("@unit", str1);
-                                cmdfmt.Parameters.AddWithValue("@item", list[1]);
+                                cmdfmt.Parameters.AddWithValue("@VendorName", "DIPL");
                                 //cmdfmt.Parameters.AddWithValue("@orderno", "");
                                 //cmdfmt.Parameters.AddWithValue("@customername", "");
                                 switch (list.Count)
                                 {
                                     case 2:
-                                        cmdfmt.Parameters.AddWithValue("@desc", "");
-                                        cmdfmt.Parameters.AddWithValue("@price", "");
-                                        cmdfmt.Parameters.AddWithValue("@amount", "");
-                                        cmdfmt.Parameters.AddWithValue("@pdfprice", "");
+                                        if (Convert.ToInt16(tableFormat2.Shipped) < 2 && list1.Count == 3)
+                                        {
+                                            cmdfmt.Parameters.AddWithValue("@item", "2PK");
+                                            cmdfmt.Parameters.AddWithValue("@desc", "Reena s Pista Kulfi QT(4)");
+                                            cmdfmt.Parameters.AddWithValue("@price", list1[2]);
+                                            cmdfmt.Parameters.AddWithValue("@amount", list1[2]);
+                                        }
+                                        else
+                                        {
+                                            cmdfmt.Parameters.AddWithValue("@item", "2PK");
+                                            cmdfmt.Parameters.AddWithValue("@desc", "Reena s Pista Kulfi QT(4)");
+                                            cmdfmt.Parameters.AddWithValue("@price", list1[2]);
+                                            cmdfmt.Parameters.AddWithValue("@amount", list1[3]);
+                                        }
                                         break;
                                     case 4:
                                         if (Convert.ToInt16(tableFormat2.Shipped) < 2 && list1.Count == 3)
                                         {
+                                            cmdfmt.Parameters.AddWithValue("@item", list[1]);
                                             cmdfmt.Parameters.AddWithValue("@desc",
                                                 (list[2] + " " + list[3] + "(" + list1[0]).Replace("'", " "));
                                             cmdfmt.Parameters.AddWithValue("@price", list1[2]);
@@ -469,6 +481,7 @@ namespace Groceries_Application.Views
                                         }
                                         else
                                         {
+                                            cmdfmt.Parameters.AddWithValue("@item", list[1]);
                                             cmdfmt.Parameters.AddWithValue("@desc",
                                                 (list[2] + " " + list[3] + "(" + list1[0]).Replace("'", " "));
                                             cmdfmt.Parameters.AddWithValue("@price", list1[2]);
@@ -480,6 +493,7 @@ namespace Groceries_Application.Views
                                     case 5:
                                         if (Convert.ToInt16(tableFormat2.Shipped) < 2 && list1.Count == 3)
                                         {
+                                            cmdfmt.Parameters.AddWithValue("@item", list[1]);
                                             cmdfmt.Parameters.AddWithValue("@desc",
                                                 (list[2] + " " + list[3] + " " + list[4] + " (" + list1[0]).Replace(
                                                     "'", " "));
@@ -489,6 +503,7 @@ namespace Groceries_Application.Views
                                         }
                                         else
                                         {
+                                            cmdfmt.Parameters.AddWithValue("@item", list[1]);
                                             cmdfmt.Parameters.AddWithValue("@desc",
                                                 (list[2] + " " + list[3] + " " + list[4] + " (" + list1[0]).Replace(
                                                     "'", " "));
@@ -501,6 +516,7 @@ namespace Groceries_Application.Views
                                     case 6:
                                         if (Convert.ToInt16(tableFormat2.Shipped) < 2 && list1.Count == 3)
                                         {
+                                            cmdfmt.Parameters.AddWithValue("@item", list[1]);
                                             cmdfmt.Parameters.AddWithValue("@desc",
                                                 (list[2] + " " + list[3] + " " + list[4] + " " + list[5] + "(" +
                                                  list1[0]).Replace("'", " "));
@@ -510,6 +526,7 @@ namespace Groceries_Application.Views
                                         }
                                         else
                                         {
+                                            cmdfmt.Parameters.AddWithValue("@item", list[1]);
                                             cmdfmt.Parameters.AddWithValue("@desc",
                                                 (list[2] + " " + list[3] + " " + list[4] + " " + list[5] + "(" +
                                                  list1[0]).Replace("'", " "));
@@ -521,6 +538,7 @@ namespace Groceries_Application.Views
                                     case 7:
                                         if (Convert.ToInt16(tableFormat2.Shipped) < 2 && list1.Count == 3)
                                         {
+                                            cmdfmt.Parameters.AddWithValue("@item", list[1]);
                                             cmdfmt.Parameters.AddWithValue("@desc",
                                                 (list[2] + " " + list[3] + " " + list[4] + " " + list[5] + " " + list[6] +
                                                  "(" + list1[0]).Replace("'", " "));
@@ -530,6 +548,7 @@ namespace Groceries_Application.Views
                                         }
                                         else
                                         {
+                                            cmdfmt.Parameters.AddWithValue("@item", list[1]);
                                             cmdfmt.Parameters.AddWithValue("@desc",
                                                 (list[2] + " " + list[3] + " " + list[4] + " " + list[5] + " " + list[6] +
                                                  "(" + list1[0]).Replace("'", " "));
@@ -542,6 +561,7 @@ namespace Groceries_Application.Views
                                     case 8:
                                         if (Convert.ToInt16(tableFormat2.Shipped) < 2 && list1.Count == 3)
                                         {
+                                            cmdfmt.Parameters.AddWithValue("@item", list[1]);
                                             cmdfmt.Parameters.AddWithValue("@desc",
                                                 (list[2] + " " + list[3] + " " + list[4] + " " + list[5] + " " + list[6] +
                                                  " " + list[7] + "(" + list1[0]).Replace("'", " "));
@@ -551,10 +571,10 @@ namespace Groceries_Application.Views
                                         }
                                         else
                                         {
+                                            cmdfmt.Parameters.AddWithValue("@item", list[1]);
                                             cmdfmt.Parameters.AddWithValue("@desc",
                                                 (list[2] + " " + list[3] + " " + list[4] + " " + list[5] + " " + list[6] +
                                                  " " + list[7] + "(" + list1[0]).Replace("'", " "));
-                                            //if (list1[2].Contains("")) { cmdfmt.Parameters.AddWithValue("@price", list1[3]); }
                                             cmdfmt.Parameters.AddWithValue("@price", list1[2]);
                                             tableFormat2.Amount = Double.Parse(list1[3]);
                                             cmdfmt.Parameters.AddWithValue("@amount", tableFormat2.Amount);
@@ -563,6 +583,7 @@ namespace Groceries_Application.Views
                                     case 9:
                                         if (Convert.ToInt16(tableFormat2.Shipped) < 2 && list1.Count == 3)
                                         {
+                                            cmdfmt.Parameters.AddWithValue("@item", list[1]);
                                             cmdfmt.Parameters.AddWithValue("@desc",
                                                 (list[2] + " " + list[3] + " " + list[4] + " " + list[5] + " " + list[6] +
                                                  " " + list[7] + " " + list[8] + "(" + list1[0]).Replace("'", " "));
@@ -572,6 +593,7 @@ namespace Groceries_Application.Views
                                         }
                                         else
                                         {
+                                            cmdfmt.Parameters.AddWithValue("@item", list[1]);
                                             cmdfmt.Parameters.AddWithValue("@desc",
                                                 (list[2] + " " + list[3] + " " + list[4] + " " + list[5] + " " + list[6] +
                                                  " " + list[7] + " " + list[8] + "(" + list1[0]).Replace("'", " "));
@@ -583,6 +605,7 @@ namespace Groceries_Application.Views
                                     case 10:
                                         if (Convert.ToInt16(tableFormat2.Shipped) < 2 && list1.Count == 3)
                                         {
+                                            cmdfmt.Parameters.AddWithValue("@item", list[1]);
                                             cmdfmt.Parameters.AddWithValue("@desc",
                                                 (list[2] + " " + list[3] + " " + list[4] + " " + list[5] + " " + list[6] +
                                                 " " + list[7] + " " + list[8] + " " + list[9] + " " + list1[0]).Replace("'", " "));
@@ -592,6 +615,7 @@ namespace Groceries_Application.Views
                                         }
                                         else
                                         {
+                                            cmdfmt.Parameters.AddWithValue("@item", list[1]);
                                             cmdfmt.Parameters.AddWithValue("@desc",
                                                 (list[2] + " " + list[3] + " " + list[4] + " " + list[5] + " " + list[6] +
                                                 " " + list[7] + " " + list[8] + " " + list[9] + "(" + list1[0]).Replace("'", " "));

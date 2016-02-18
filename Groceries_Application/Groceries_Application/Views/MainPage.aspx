@@ -37,10 +37,11 @@
                                 <input type="submit" id="Submit1" value="Upload" runat="server" OnServerClick="Submit1_OnServerClick"/>
                             </td>
                             <td style="float: none">
-                                <br/>
+                                
                                 
                             </td>
                             <td>
+                                <br/>
                                 <asp:Label ID="lblMessage"  Font-Bold="True" ForeColor="Red" runat="server" Visible="True"></asp:Label>
                             </td>
                         </tr>
