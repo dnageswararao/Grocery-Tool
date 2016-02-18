@@ -1,0 +1,87 @@
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\Groceries_Application.dll.config
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\Groceries_Application.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\Groceries_Application.pdb
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\Antlr3.Runtime.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.Core.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\System.Web.Optimization.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\System.Web.Providers.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\WebGrease.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\System.Web.Providers.xml
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.Core.xml
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.pdb
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\CuteWebUI.AjaxUploader.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.csprojResolveAssemblyReference.cache
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\itextsharp.dll
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\bin\itextsharp.xml
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.csproj.GenerateResource.Cache
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.VendorBasedReport.resources
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.ItemVendorBasedReport.resources
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.Top10RateIncreaseReport.resources
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.Top10RateDecreaseReport.resources
+C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.Last2InvoicesReport.resources
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.GetVendorItemsReport.resources
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.ItemVendorBasedReport.resources
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.Last2InvoicesReport.resources
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.Top10RateIncreaseReport.resources
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.Top10RateDecreaseReport.resources
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.VendorReport2.resources
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.csproj.GenerateResource.Cache
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.csprojResolveAssemblyReference.cache
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Groceries_Application.dll.config
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Groceries_Application.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Groceries_Application.pdb
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Antlr3.Runtime.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\AspNet.ScriptManager.jQuery.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\CuteWebUI.AjaxUploader.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\DataLayer.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.AspNet.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.Core.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.OAuth.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.OpenId.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\itextsharp.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.AspNet.FriendlyUrls.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.ScriptManager.WebForms.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.Web.Infrastructure.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\System.Web.Optimization.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\System.Web.Providers.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\WebGrease.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\DataLayer.pdb
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\itextsharp.xml
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\System.Web.Providers.xml
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.Core.xml
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.OAuth.xml
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.OpenId.xml
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.AspNet.xml
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.AspNet.FriendlyUrls.xml
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.dll
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.pdb

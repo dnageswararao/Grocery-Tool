@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.Master.cs" Inherits="Groceries_Application.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="description" content="Websitename" />
+    <meta name="keywords" content="Websitename" />
+    <title>Grocery Tool</title>
+    <link rel="shortcut icon" type="image/x-icon" />
+    <link href="~/Content/Styles.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   	<div class="page-header">
+	    <div class="pull-left">
+    		<a class="navbar-brand brand" href="#">
+                <img src="Images/logo.png"  height="60" alt="India Bazar"/>
+               <%-- <img src="logo.png" height="60"  />--%>
+    		</a>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <form  runat="server">
+      <asp:ScriptManager ID="ScriptManager1" runat="server"  EnableScriptGlobalization="true">
+          <Scripts >
+                <asp:ScriptReference Path="~/Scripts/jquery-1.10.2.min.js" />
+              <asp:ScriptReference Path="~/scripts/bootstrap.min.js" />
+          </Scripts>
+      </asp:ScriptManager>
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="row">
+            <div class="col-md-12 pull-left">
+                
+            </div>
+        </div>
+	    <br />
+	    <br />
+        <div class="row">
+            
+        </div>
+    </div>
+</body>
+</html>

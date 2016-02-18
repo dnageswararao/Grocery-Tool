@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Groceries_Application.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="description" content="Websitename" />
+    <meta name="keywords" content="Websitename" />
+    <title>Grocery Tool</title>
+    <link rel="shortcut icon" type="image/x-icon" />
+    <link href="~/Content/Styles.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-1.10.2.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   	<div class="page-header">
+	    <div class="pull-left">
+    		<a class="navbar-brand brand" href="MainPage.aspx">
+                <img src="../Images/logo.png" height="60" />
+    		</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right pull-right cl-effect-15 navRight">
+            <li class="block">
+                <a href="MainPage.aspx" data-hover="Home Page" style="line-height: 50px;">Home </a>
+            </li>
+            <li class="dropdown block">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="Reports" style="line-height: 50px;">Reports<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="ReportFormat.aspx">Vendor Report</a></li>
+                </ul>
+            </li>
+            <li class="block">
+                <a href="../Default.aspx" data-hover="Logout" style="line-height: 50px;">Logout </a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <div class="container">
+            <form  runat="server">
+      <asp:ScriptManager ID="ScriptManager1" runat="server"  EnableScriptGlobalization="true">
+          <Scripts >
+                <asp:ScriptReference Path="~/Scripts/jquery-1.10.2.min.js" />
+              <asp:ScriptReference Path="~/scripts/bootstrap.min.js" />
+          </Scripts>
+      </asp:ScriptManager>
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div>
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="row">
+            <div class="col-md-12 pull-left">
+                
+            </div>
+        </div>
+	    <br />
+	    <br />
+        <div class="row">
+            
+        </div>
+    </div>
+</body>
+</html>

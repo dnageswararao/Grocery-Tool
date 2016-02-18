@@ -1,0 +1,486 @@
+﻿/* ---  Header -----*/
+/* ----header default --*/
+.page-header {
+    background:#5494CF;
+    height: 100px;
+    margin:0 !important;
+}
+  /* -----logo ---- */
+.brand{
+	margin:0.5% !important;
+	padding:0 !important;
+}	
+/* ----------*/
+.navbar-right {
+    margin: 1% 1% !important;
+}
+/*------Ends---*/
+/* -- Common Styles--*/
+/* Transition effect for hover in header */
+.cl-effect-15 {
+   font-size: 15px;
+ }
+.cl-effect-15 a:hover {
+    color: #fff;
+}
+.cl-effect-15 a {
+ color: #fff !important;
+ font-weight: 700;
+ text-shadow: none;
+}
+.cl-effect-15 a::before {
+  color: #fff;
+  position: absolute;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.cl-effect-15 a:hover::before,
+ .cl-effect-15 a:focus::before {
+   transform: scale(0.9);
+   opacity: 0;
+   color: #fff;
+}
+ /* ----ends---- */
+/* ----  FOOTER ----------*/
+/* --- Default Footer ------*/
+.panel-footer {
+    background-color: #5494CF !important;
+    min-height: 100px;
+    color: white;
+    height: auto;
+    margin:15% 0% 0% 0%;
+}
+/* -----------------*/
+/* ----- remove padding for rows  ----*/
+.row {
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+}
+/*-----*/
+/*----Ends----*/
+/*Content style*/
+html {
+    background-image: none !important;
+}
+h2 {
+    margin: 2%;
+}
+body {
+    font: 12px/18px Arial, Helvetica, sans-serif !important;
+    overflow: auto;
+}
+li {
+    list-style: none;
+}
+a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+}
+/*-----------*/
+/* style to header right */
+.form-control[readonly] {
+    background-color: white !important;
+}
+/* pagination*/
+.pagination li, #renewedupto, .date [readonly] {
+    cursor: pointer !important;
+}
+.pagination .activePage {
+    color: white !important;
+    font-size: 16px;
+    background: #3399CC !important;
+}
+.page-sm {
+    height: 30px !important;
+    margin-right: 0px !important;
+    margin-top: 0px !important;
+}
+.optionValue {
+    padding: 0%;
+    width: 50px;
+    height: 22px;
+}
+
+/*------------*/
+/* --- color to table header ------*/
+.table-head {
+    background-color: #428bca;
+    color: white;
+}
+.button-vertical {
+    margin: 1%;
+}
+/* --------------*/
+/* ---small container--*/
+.cont-sm {
+    width: 680px;
+}
+/*---------------*/
+/* loader img ---*/
+#loadingImg {
+    width: 15%;
+    margin: 20% 20%;
+    z-index: 10;
+    position: absolute;
+    background: transparent;
+    border-color: transparent;
+}
+.block {
+    display: inline-block !important;
+    padding: 5px;
+}
+.font-style {
+    font-variant: small-caps;
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(102, 146, 180) !important;
+}
+.font-change{
+    font-weight: initial;
+    font-size: 14px;
+    font-variant: normal;
+}
+.form-control[readonly] {
+    background-color: white !important;
+}
+.center {
+    width: 100px;
+}
+/* --- size of dob -----*/
+#bsToAd {
+    padding: 6px 0px;
+}
+/* ---ends ---*/
+/* ------validation ----- */
+.form-horizontal .has-feedback .form-control-feedback {
+    right: -10px !important;
+    z-index: initial !important;
+}
+.has-error .form-control-feedback{
+    right: -10px !important;
+    top: 0% !important;
+    z-index: initial !important;
+}
+.has-success .form-control-feedback {
+    right: -10px !important;
+    z-index: initial !important;
+}
+/* ------ends validation ----- */
+.center-align {
+    align-content: center !important;
+}
+.form-fit{
+    padding:5%;
+}
+#menu {
+    float: right;
+    margin: 2%;
+}
+tbody.menu {
+    margin: 20% 20% 40% 40% !important;
+}
+.table thead td {
+    background-color: white;
+}
+/*error*/
+.error, .validation-summary-errors {
+    color: red;
+}
+.col-sm-9 #permission {
+    color: #555 !important;
+}
+.glyphicon {
+    top: 0 !important;
+}
+.validation-summary-errors {
+    font-weight: bold;
+    margin: 0%;
+}
+/*---*/
+#reportmodal .modal-content {
+    width: 700px !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+.menu div {
+    width: 100px;
+}
+#tourists {
+    background-color: rgb(162, 170, 178);
+}
+/*admin layout styles*/
+/* style to header right */
+.dropdown-menu > li > a {
+    color: rgb(102, 146, 180) !important;
+}
+/*log out button*/
+.button {
+    -webkit-border-radius: 25;
+    -moz-border-radius: 25;
+    border-radius: 25px;
+    font-family: Georgia;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 7px 20px 7px 20px;
+    text-decoration: none;
+}
+.button:hover {
+    text-decoration: none;
+}
+#logout {
+    position: relative;
+    margin: 5% 13%;
+}
+/* color for nav a hover */
+.nav > li > a:hover, .nav > li > a:focus, .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+/* ---ends--- */
+.cont-sm, .container {
+    min-height: 350px;
+}
+/*--register*/
+#successmessage {
+    z-index: 20;
+    margin: 10px auto !important;
+    position: absolute !important;
+    margin: 300px 140px 100px 100px !important;
+}
+.table-responsive {
+    width: 100% !important;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.table-responsive td{
+    max-width: 458px;
+}
+.move-right{
+    margin-left:46%;
+}
+.move-left-small{
+    margin-left:2% !important;
+}
+.move-right-small{
+    margin-right:2% !important;
+}
+/*------*/
+/* ----- word break in table ------ */
+td {
+    -ms-word-break: break-all;
+    -moz-word-break: break-word;
+    -o-word-break: break-word;
+    word-break: break-all;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+    
+}
+.right-nav{
+    margin: 3% 1% !important;
+}
+td, th {
+    vertical-align: middle !important;
+}
+/* ----- ends word break ------ */
+/*-----Countries list style*/
+#createModal .modal-body {
+    height: 180px;
+}
+
+.navCountry, .nav-rap {
+    margin: 0px -15px !important;
+}
+/*-----------------------------*/
+/*footer links styling*/
+.pnl {
+    margin: 2%;
+}
+.pnl-top{
+    margin-top:2%;
+}
+.font-verdana {
+    font-family: Verdana;
+}
+.font-large{
+    font-size:14px;
+}
+.list {
+    margin: 2%;
+    list-style: circle !important;
+}
+/*---------------------*/
+/*--Tour operatours--*/
+textarea {
+    -moz-resize: none;
+    -ms-resize: none;
+    -o-resize: none;
+    resize: none;
+    height: 70px;
+}
+/*--------------------*/
+/* Reports */
+#report {
+    margin: auto !important;
+    height: auto;
+    width: 1015px;
+}
+.navbar-right .dropdown-menu {
+    right: 0 !important;
+    left: auto !important;
+}
+.interactive-page .sheet {
+    margin: 40px 60px !important;
+}
+.panel-body > #ContentPlaceHolder1_ReportViewer1 {
+    margin: auto;
+    height: auto;
+    width: 650px;
+}
+/*.rbDecorated {
+    margin-top: -5%;
+    padding-bottom: 45%;
+}*/
+.one {
+    display: inline-block;
+}
+.head td {
+    padding-bottom: 4%;
+    padding-top: 3%;
+}
+#loader {
+    display: none;
+}
+/*----------*/
+/* extra small device*/
+@media only screen and (max-width:768px) {
+    /*--header--*/
+    .block {
+        display: inline-block !important;
+        padding: 0%;
+    }
+
+    .page-header {
+        height: 125px;
+    }
+
+    .right-nav {
+        margin: -2% 17% !important;
+    }
+    .form-fit{
+         padding: inherit;
+     }
+    .nav-right {
+        margin: 4% 2% 2% 5% !important;
+        
+    }
+    .navRight {
+        /*margin: 4% 28% 4% 18% !important;*/
+        margin:5% 10% 4% 0% !important;
+    }
+    #logout {
+        position: absolute;
+        margin: -20% 74%;
+    }
+    .navbar-nav .open .dropdown-menu {
+        position: absolute !important;
+        float: none;
+        width: 232% !important;
+        background-color: #fff !important;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .navbar-right .dropdown-menu {
+        right: 0;
+        left: -105%;
+    }
+    /*------*/
+    .little {
+        margin: 2%;
+    }
+    /*Reports*/
+    .ReportToolbar {
+        width: 90%;
+    }
+    #ContentPlaceHolder1_ReportViewer1_ReportArea_ReportArea {
+        height: 81% !important;
+        width: 87% !important;
+    }
+    #ContentPlaceHolder1_ReportViewer1 {
+        width: 645px !important;
+    }
+    #report {
+        margin: 0 !important;
+        height: auto;
+        width: 438px;
+    }
+    #ContentPlaceHolder1_ReportViewer1_ReportToolbar {
+        margin: -2%;
+    }
+    /*--------*/
+    .move-right{
+        margin-left:11% !important;
+    }
+    td {
+        -ms-word-break: inherit;
+        -moz-word-break: inherit;
+        -o-word-break: inherit;
+        word-break: inherit;
+        -webkit-hyphens: inherit;
+        -moz-hyphens: inherit;
+        -ms-hyphens: inherit;
+        -o-hyphens: inherit;
+        hyphens: inherit;
+    }
+    .button-vertical {
+        margin: inherit;
+    }
+}
+/*--small device--*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 992px) {
+    .form-fit{
+         padding: inherit;
+     }
+    td {
+        -ms-word-break: inherit;
+        -moz-word-break: inherit;
+        -o-word-break: inherit;
+        word-break: inherit;
+        -webkit-hyphens: inherit;
+        -moz-hyphens: inherit;
+        -ms-hyphens: inherit;
+        -o-hyphens: inherit;
+        hyphens: inherit;
+    }
+    .button-vertical {
+        margin: inherit;
+    }
+}
+/*--medium device--*/
+@media only screen and (min-device-width : 992px) and (max-device-width : 1224px) {
+    .navbar-right {
+        margin: 2% 7% !important;
+    }
+    .form-fit{
+         padding: inherit;
+     }
+    td {
+        -ms-word-break: inherit;
+        -moz-word-break: inherit;
+        -o-word-break: inherit;
+        word-break: inherit;
+        -webkit-hyphens: inherit;
+        -moz-hyphens: inherit;
+        -ms-hyphens: inherit;
+        -o-hyphens: inherit;
+        hyphens: inherit;
+    }
+    .button-vertical {
+        margin: inherit;
+    }
+}

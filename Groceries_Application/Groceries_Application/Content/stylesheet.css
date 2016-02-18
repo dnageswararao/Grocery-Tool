@@ -1,0 +1,483 @@
+﻿/* Global Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+h2{
+	margin-bottom:2%;
+}
+body {
+	font: 12px/18px Arial, Helvetica, sans-serif;
+	overflow:auto;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+textarea {
+	resize: none;
+}
+
+/* Common Classes
+--------------------------------------------------------------------------
+========================================================================*/
+.clear {
+	clear: both;
+	width: 100%;
+	overflow: hidden;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+.float-l,
+img.img-left {
+	float: left;
+}
+
+.float-r,
+img.img-right {
+	float: right;
+}
+
+a {
+	outline: none;
+	text-decoration: none;
+}
+
+
+/* Container
+--------------------------------------------------------------------------
+========================================================================*/
+.content {
+	width: 980px;
+	margin: 0px auto;
+}
+
+/* Header
+--------------------------------------------------------------------------
+========================================================================*/
+header h1 {
+	width: 365px;
+	height: 197px;
+	background: url(../images/backgrounds/logo.png) no-repeat;
+}
+header h1 img {
+	margin: 45px 0 0 35px;
+}
+header h2 {
+	width: 196px;
+	height: 48px;
+	position: absolute;
+	right: 0;
+	top: 35px;
+	background: url(../images/backgrounds/topmenu.png) no-repeat;
+}
+header h2 a {
+	display: inline-block;
+	line-height: 48px;
+	padding: 0 0 0 46px;
+	color: #fff;
+	font-weight: normal;
+	font-size: 16px;
+	background: url(../images/icons/topmenu.png) no-repeat;
+}
+header h2 a.ic-lock {
+	background-position: 5px 0;
+}
+header h2 a.ic-menu {
+	background-position: 5px -48px;
+}
+header h2 a.ic-menu.opacity {
+	opacity: 0.5;
+}
+.tloginform {
+	position: absolute;
+	right: 0;
+	top: 75px;
+	padding: 10px;
+	background: #fff;
+	width: 175px;
+	border-radius: 0 0 10px 10px;
+}
+.tloginform label {
+	display: block;
+	font-weight: bold;
+}
+.tloginform input[type=text],
+.tloginform input[type=password] {
+	margin: 0 0 10px 0;
+	width: 96%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.tloginform input[type=submit] {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding: 5px 10px;
+	margin: 0;
+	border: 0;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	background: #bd370c;
+	border: 2px #97300f solid;
+}
+
+/* Footer
+--------------------------------------------------------------------------
+========================================================================*/
+footer {
+	background: url(../images/backgrounds/footer.png) repeat-x;
+	height: 125px;
+	margin-top: -15px;
+}
+footer .container {
+	padding: 60px 0 20px 0;
+}
+footer #flinks,
+footer #flinks a {
+	color: #cb3300;
+}
+footer #ftext,
+footer #ftext a {
+	color: #333333;
+}
+footer #flinks a:hover,
+footer #ftext a:hover {
+	text-decoration: underline;
+}
+
+/* Content
+--------------------------------------------------------------------------
+========================================================================*/
+#content-wrap {
+	margin: 120px 0 0 0;
+	background: url(../images/backgrounds/content-wrap.png) repeat-y center top;
+}
+#content-wrap .container {
+	padding: 15px 0 15px 245px;
+	width: 735px;
+	color: #fff;
+	position: relative;
+}
+#content-wrap #briefcase {
+	position: absolute;
+	bottom: -30px;
+	left: -115px;
+}
+#content-wrap #why-permit {
+	 border-radius: 3px;
+	 line-height: 30px;
+	 padding: 0 10px;
+	 display: inline-block;
+	 position: absolute;
+	 right: 250px;
+	 top: -15px;
+	 text-shadow: 1px 1px 1px #fff;
+	 color: #464646;
+	 background: linear-gradient(to bottom, #fff, #c5c5c5);
+}
+#content-wrap #why-permit:after,
+#content-wrap #why-permit:before {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #c5c5c5;
+    bottom: -8px;
+    content: '';
+    left: 85%;
+    margin-left: -8px;
+    position: absolute;
+}
+
+#content-wrap h3 {
+	font-size: 38px;
+	font-weight: normal;
+	line-height: normal;
+	margin: 0 0 25px 0;
+}
+#content-wrap h3 span {
+	color: #f73f02;
+}
+#content-wrap #announcement {
+	background: url(../images/backgrounds/announcement.png) no-repeat;
+	padding: 25px 0 25px 245px;
+	width: 735px;
+	margin: 20px 0 0 -245px;
+}
+#content-wrap #steps p {
+	text-align: center;
+	float: left;
+  
+}
+#content-wrap #steps p span {
+	position: relative;
+	display: inline-block;
+	height: 54px;
+}
+#content-wrap #steps p span i,
+#button-close {
+	position: absolute;
+	left: -16px;
+	top: -7px;
+	width: 32px;
+	height: 32px;
+	background: #cc3300;
+	text-align: center;
+	line-height: 32px;
+	font-size: 19px;
+	font-style: normal;
+	color: #fff;
+	border-radius: 15px;
+	box-shadow: 0 0 0 3px rgba(64,97,125,1.0);
+}
+#content-wrap #steps p strong {
+	display: block;
+	font-weight: normal;
+	font-size: 16px;
+}
+#content-wrap #steps p.spacer {
+	margin: 0 65px;
+}
+#content-wrap h4 {
+	font-size: 14px;
+	width: 490px;
+	font-weight: normal;
+	padding: 0 0 0 45px;
+	background: url(../images/icons/comment.png) no-repeat;
+}
+#content-wrap #steps #button-start {
+	float: left;
+	width: 197px;
+	height: 78px;
+	background: url(../images/backgrounds/button.png) no-repeat;
+	text-align: center;
+	font-size: 17px;
+	color: #fff;
+	line-height: normal;
+	margin: -7px 0 0 15px;
+}
+#content-wrap #steps #button-start span {
+	font-weight: bold;
+	font-size: 24px;
+	display: block;
+	padding: 10px 0 0 0;
+}
+
+/*start User Manual*/
+
+/*#content-wrap #steps #button-manual {
+	float: left;
+	width: 98px;
+	height: 48px;
+	background: url('../images/backgrounds/button - manual.png') no-repeat;
+	text-align: center;
+	font-size: 17px;
+	color: #fff;
+	line-height: normal;
+	margin: 8px 0 0 15px;
+}
+
+#content-wrap #steps #button-manual {
+	font-weight: bold;
+	font-size: 15px;
+	display: block;
+	padding: 10px 0 0 0;
+    
+}*/
+
+/*End User Manual*/
+
+#content-wrap #showsteps form p {
+	clear: both;
+	padding: 0 0 5px 0;
+	overflow: hidden;
+}
+#content-wrap #showsteps form span input {
+	margin: 8px 5px 0 0;
+}
+#content-wrap #showsteps form label {
+	line-height: 30px;
+	width: 150px;
+	float: left;
+}
+#content-wrap #showsteps form input[type=text],
+#content-wrap #showsteps form textarea,
+#content-wrap #showsteps form input[type=number],
+#content-wrap #showsteps form input[type=date] {
+	border: 0;
+	padding: 5px 10px;
+	margin: 0;
+	border-radius: 5px;
+	width: 250px;
+	/*float: left;*/
+	border: 2px #fff solid;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#content-wrap #showsteps form select {
+	border: 0;
+	padding: 5px 10px;
+	margin: 0;
+	border-radius: 5px;
+	width: 272px;
+	float: left;
+	border: 2px #fff solid;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#content-wrap #showsteps form .error {
+	border: 2px #f00 solid !important;
+}
+#content-wrap #showsteps form input[type=button] {
+	border: 0;
+	padding: 10px 15px;
+	margin: 5px 0 0 0;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#content-wrap #showsteps form input[type=button].type1 {
+	background: #5c5c5c;
+	border: 2px #474747 solid;
+}
+#content-wrap #showsteps form input[type=button].type2 {
+	background: #bd370c;
+	border: 2px #97300f solid;
+}
+/* ---- error-------*/
+
+    .validation-summary-errors li {
+        list-style:none;
+        color: red;
+    }
+/*-------------------*/
+/* Breadcrumb
+--------------------------------------------------------------------------
+======================================================================== */
+#crumbs {
+	margin: 5px 0 15px 0px;
+}
+
+	#crumbs ul {
+		list-style: none;
+		display: inline-table;
+	}
+		#crumbs ul li {
+			display: inline;
+		}
+	
+		#crumbs ul li a {
+			display: block;
+			float: left;
+			height: 30px;
+			background: #3498db;
+			text-align: center;
+			padding: 10px 20px 0 40px;
+			position: relative;
+			margin: 0 10px 0 0; 
+			
+			font-size: 18px;
+			text-decoration: none;
+			color: #fff;
+		}
+			#crumbs ul li a:after {
+				content: "";  
+				border-top: 20px solid transparent;
+	 			border-bottom: 20px solid transparent;
+	  			border-left: 20px solid #3498db;
+				position: absolute; right: -20px; top: 0;
+				z-index: 1;
+			}
+			
+			#crumbs ul li a:before {
+				content: "";  
+				border-top: 20px solid transparent;
+	  			border-bottom: 20px solid transparent;
+	  			border-left: 20px solid #3a6386;
+				position: absolute; left: 0; top: 0;
+			}
+	
+				#crumbs ul li:first-child a {
+					border-top-left-radius: 5px; border-bottom-left-radius: 5px;
+				}
+				#crumbs ul li:first-child a:before {
+					display: none; 
+				}
+				
+				#crumbs ul li:last-child a {
+					padding-right: 40px;
+					border-top-right-radius: 5px; border-bottom-right-radius: 5px;
+				}
+				#crumbs ul li:last-child a:after {
+					display: none; 
+				}
+			
+			#crumbs ul li a:hover,
+			#crumbs ul li a.active {
+				background: #bd370c;
+			}
+				#crumbs ul li a:hover:after,
+				#crumbs ul li a.active:after {
+					border-left-color: #bd370c;
+				}
+
+           #upbtn {
+                background-color: #3498db;
+                margin: auto;
+                padding: 7px 18px;
+                border: 2px solid #3498db;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 3px;
+                position: relative;
+                top: -5px;
+                font-family: Arial, Helvetica, sans-serif;
+                }
