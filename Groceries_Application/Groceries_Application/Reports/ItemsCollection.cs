@@ -24,9 +24,7 @@ namespace Groceries_Application.Reports
             SqlConnection cnn;
             using (cnn = new SqlConnection(Cnn1.ConnectionString))
             {
-                var query = vendortextbox.Contains("DIP")
-                    ? "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM PDFFormatTable2 where Amount <>0" + "order by InvoiceDate asc"
-                    : "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where  Amount <>0" + "order by InvoiceDate asc";
+                var query = "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where Amount <>0 and VendorName='" + vendortextbox +"'" + "order by InvoiceDate asc";
                 cnn.Open();
 
                 var cmd = new SqlCommand(query, cnn);
@@ -40,12 +38,8 @@ namespace Groceries_Application.Reports
                 for (var i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
                     var desc = ds.Tables[0].Rows;
-                    var query1 = vendortextbox.Contains("DIP")
-                        ? "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM PDFFormatTable2 where Description = '" +
-                          desc[i].ItemArray[3] + "'and Amount <>0" +
-                          "order by InvoiceDate asc"
-                        : "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where Description = '" +
-                          desc[i].ItemArray[3] + "'and Amount <>0" +
+                    var query1 = "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where Description = '" +
+                          desc[i].ItemArray[3] + "'and Amount <>0" + "and VendorName='" + vendortextbox +"'" +
                           "order by InvoiceDate asc";
                     var cmd1 = new SqlCommand(query1, cnn);
                     var sda1 = new SqlDataAdapter(cmd1);
@@ -121,9 +115,7 @@ namespace Groceries_Application.Reports
             SqlConnection cnn;
             using (cnn = new SqlConnection(Cnn1.ConnectionString))
             {
-                var query = vendortextbox.Contains("DIP")
-                    ? "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM PDFFormatTable2 order by InvoiceDate asc"
-                    : "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable order by InvoiceDate asc";
+                var query = "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where VendorName='" + vendortextbox +"'" +"order by InvoiceDate asc";
                 cnn.Open();
 
                 var cmd = new SqlCommand(query, cnn);
@@ -137,11 +129,8 @@ namespace Groceries_Application.Reports
                 for (var i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
                     var desc = ds.Tables[0].Rows;
-                    var query1 = vendortextbox.Contains("DIP")
-                        ? "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM PDFFormatTable2 where Description = '" +
-                          desc[i].ItemArray[3] + "'" + "order by InvoiceDate asc"
-                        : "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where Description = '" +
-                          desc[i].ItemArray[3] + "'" + "order by InvoiceDate asc";
+                    var query1 = "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where Description = '" +
+                          desc[i].ItemArray[3] + "'" + "VendorName='" + vendortextbox +"'" + "order by InvoiceDate asc";
                     var cmd1 = new SqlCommand(query1, cnn);
                     var sda1 = new SqlDataAdapter(cmd1);
                     var ds1 = new DataSet();
@@ -219,9 +208,7 @@ namespace Groceries_Application.Reports
             SqlConnection cnn;
             using (cnn = new SqlConnection(Cnn1.ConnectionString))
             {
-                var query = vendortextbox.Contains("DIP")
-                    ? "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM PDFFormatTable2 where InvoiceDate >= '" + fromdate + "' and InvoiceDate <= '" + todate + "'" + "and Amount <>0" + "order by InvoiceDate asc"
-                    : "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where InvoiceDate >= '" + fromdate + "' and InvoiceDate <= '" + todate + "'" + "and Amount <>0" + "order by InvoiceDate asc";
+                var query = "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where InvoiceDate >= '" + fromdate + "' and InvoiceDate <= '" + todate + "'" + "and Amount <>0 and VendorName='" + vendortextbox +"'" + "order by InvoiceDate asc";
                 cnn.Open();
 
                 var cmd = new SqlCommand(query, cnn);
@@ -235,14 +222,9 @@ namespace Groceries_Application.Reports
                 for (var i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
                     var desc = ds.Tables[0].Rows;
-                    var query1 = vendortextbox.Contains("DIP")
-                        ? "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM PDFFormatTable2 where Description = '" +
+                    var query1 = "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where Description = '" +
                           desc[i].ItemArray[3] + "'" + "and InvoiceDate >= '" + fromdate + "' and InvoiceDate <= '" +
-                          todate + "'" + "and Amount <>0" +
-                          "order by InvoiceDate asc"
-                        : "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where Description = '" +
-                          desc[i].ItemArray[3] + "'" + "and InvoiceDate >= '" + fromdate + "' and InvoiceDate <= '" +
-                          todate + "'" + "and Amount <>0" +
+                          todate + "'" + "and Amount <>0 and VendorName='" + vendortextbox +"'" +
                           "order by InvoiceDate asc";
                     var cmd1 = new SqlCommand(query1, cnn);
                     var sda1 = new SqlDataAdapter(cmd1);
@@ -318,14 +300,9 @@ namespace Groceries_Application.Reports
             SqlConnection cnn;
             using (cnn = new SqlConnection(Cnn1.ConnectionString))
             {
-                var query = vendortextbox.Contains("DIP")
-                    ? "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM PDFFormatTable2 where Description = '" +
+                var query = "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where Description = '" +
                       desctext + "'" + "and InvoiceDate >= '" + fromdate + "' and InvoiceDate <= '" + todate + "'" +
-                      "and Amount <>0" +
-                      "order by InvoiceDate asc"
-                    : "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where Description = '" +
-                      desctext + "'" + "and InvoiceDate >= '" + fromdate + "' and InvoiceDate <= '" + todate + "'" +
-                      "and Amount <>0" +
+                      "and Amount <>0 and VendorName='" + vendortextbox + "'" +
                       "order by InvoiceDate asc";
                 cnn.Open();
 
@@ -380,9 +357,7 @@ namespace Groceries_Application.Reports
             SqlConnection cnn;
             using (cnn = new SqlConnection(Cnn1.ConnectionString))
             {
-                var query = vendor.Contains("DIP")
-                     ? "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM PDFFormatTable2 where Description = '" + desctext + "'" + "and InvoiceDate >= '" + fromdate + "' and InvoiceDate <= '" + todate + "'" + "and Amount <>0" + "order by InvoiceDate asc"
-                     : "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where Description = '" + desctext + "'" + "and InvoiceDate >= '" + fromdate + "' and InvoiceDate <= '" + todate + "'" + "and Amount <>0" + "order by InvoiceDate asc";
+                var query =  "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where Description = '" + desctext + "'" + "and InvoiceDate >= '" + fromdate + "' and InvoiceDate <= '" + todate + "'" + "and Amount <>0 and VendorName='" + vendor +"'"  + "order by InvoiceDate asc";
                 cnn.Open();
 
                 double percentage = 0;
@@ -411,9 +386,7 @@ namespace Groceries_Application.Reports
             SqlConnection cnn;
             using (cnn = new SqlConnection(Cnn1.ConnectionString))
             {
-                var query = vendor.Contains("DIP")
-                     ? "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM PDFFormatTable2 where Description = '" + desctext + "'" + "and Amount <>0" + "order by InvoiceDate asc"
-                     : "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where Description = '" + desctext + "'" + "and Amount <>0" + "order by InvoiceDate asc";
+                var query = "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where Description = '" + desctext + "'" + "and Amount <>0 and VendorName='" + vendor +"'" + "order by InvoiceDate asc";
                 cnn.Open();
 
                 double percentage = 0;
@@ -445,9 +418,7 @@ namespace Groceries_Application.Reports
             SqlConnection cnn;
             using (cnn = new SqlConnection(Cnn1.ConnectionString))
             {
-                var query = vendor.Contains("DIP")
-                                     ? "select item,Description  from PDFFormatTable2 where amount <>0 group by item,Description having count(*)>1"
-                                     : "select item,Description  from SavePDFTable where amount <>0 group by item,Description having count(*)>1";
+                var query = "select item,Description from SavePDFTable where amount <>0 and VendorName='" + vendor +"' group by item,Description having count(*)>1";
                 cnn.Open();
                 ItemsDataCollection = new List<ItemsList>();
                 IncreaseItemsDataCollection = new List<ItemsList>();
@@ -458,9 +429,7 @@ namespace Groceries_Application.Reports
 
                 for (var i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
-                    var query1 = vendor.Contains("DIP")
-                    ? "select InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount from PDFFormatTable2 where amount <>0 and item = '" + ds.Tables[0].Rows[i].ItemArray[0] + "' group by InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount  order by InvoiceDate asc "
-                    : "select InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount from SavePDFTable where amount <>0 and item = '" + ds.Tables[0].Rows[i].ItemArray[0] + "' group by InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount  order by InvoiceDate asc ";
+                    var query1 = "select InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount from SavePDFTable where amount <>0 and item = '" + ds.Tables[0].Rows[i].ItemArray[0] + "'and VendorName='" + vendor + "' group by InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount  order by InvoiceDate asc ";
                     var cmd1 = new SqlCommand(query1, cnn);
                     var sda1 = new SqlDataAdapter(cmd1);
                     var ds1 = new DataSet();
@@ -558,9 +527,7 @@ namespace Groceries_Application.Reports
             SqlConnection cnn;
             using (cnn = new SqlConnection(Cnn1.ConnectionString))
             {
-                var query = vendor.Contains("DIP")
-                                     ? "select item,Description  from PDFFormatTable2 where amount <>0 group by item,Description having count(*)>1"
-                                     : "select item,Description  from SavePDFTable where amount <>0 group by item,Description having count(*)>1";
+                var query = "select item,Description  from SavePDFTable where amount <>0 and VendorName='" + vendor +"' group by item,Description having count(*)>1";
                 cnn.Open();
                 ItemsDataCollection = new List<ItemsList>();
                 DecreaseItemsDataCollection = new List<ItemsList>();
@@ -571,9 +538,7 @@ namespace Groceries_Application.Reports
 
                 for (var i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
-                    var query1 = vendor.Contains("DIP")
-                    ? "select InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount from PDFFormatTable2 where amount <>0 and item = '" + ds.Tables[0].Rows[i].ItemArray[0] + "' group by InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount  order by InvoiceDate asc "
-                    : "select InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount from SavePDFTable where amount <>0 and item = '" + ds.Tables[0].Rows[i].ItemArray[0] + "' group by InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount  order by InvoiceDate asc ";
+                    var query1 = "select InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount from SavePDFTable where amount <>0 and item = '" + ds.Tables[0].Rows[i].ItemArray[0] + "'and VendorName='" + vendor + "' group by InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount  order by InvoiceDate asc ";
                     var cmd1 = new SqlCommand(query1, cnn);
                     var sda1 = new SqlDataAdapter(cmd1);
                     var ds1 = new DataSet();
@@ -672,9 +637,7 @@ namespace Groceries_Application.Reports
             using (cnn = new SqlConnection(Cnn1.ConnectionString))
             {
 
-                var query = vendortextbox.Contains("DIP")
-                                     ? "select Top 2 InvoiceNo from PDFFormatTable2 where amount <>0 group by invoiceNo,InvoiceDate order by invoicedate desc"
-                                     : "select Top 2 InvoiceNo from SavePDFTable where amount <>0 group by invoiceNo,InvoiceDate order by invoicedate desc";
+                var query = "select Top 2 InvoiceNo from SavePDFTable where amount <>0 and VendorName='" + vendortextbox +"' group by invoiceNo,InvoiceDate order by invoicedate desc";
 
 
                 cnn.Open();
@@ -688,11 +651,8 @@ namespace Groceries_Application.Reports
 
                 for (var i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
-                    var query1 = vendortextbox.Contains("DIP")
-                        ? "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM PDFFormatTable2 where InvoiceNo = '" +
-                          ds.Tables[0].Rows[i].ItemArray[0] + "'" + "and Amount <>0" + "order by InvoiceDate asc"
-                        : "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where InvoiceNo = '" +
-                          ds.Tables[0].Rows[i].ItemArray[0] + "'" + "and Amount <>0" + "order by InvoiceDate asc";
+                    var query1 = "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where InvoiceNo = '" +
+                          ds.Tables[0].Rows[i].ItemArray[0] + "'" + "and Amount <>0 and VendorName='" + vendortextbox +"'order by InvoiceDate asc";
                     var cmd1 = new SqlCommand(query1, cnn);
                     var sda1 = new SqlDataAdapter(cmd1);
                     var ds1 = new DataSet();

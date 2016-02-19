@@ -121,9 +121,7 @@ namespace Groceries_Application.Views
             var cnn = DbUtility.GetConnection();
             using (cnn = new SqlConnection(cnn.ConnectionString))
             {
-                var query = VendorNameComboBox.Text.Contains("DIP")
-                    ? "SELECT distinct(InvoiceNo),Description FROM PDFFormatTable2 where amount <>0"
-                    : "SELECT distinct(InvoiceNo),Description FROM SavePDFTable where amount <>0";
+                var query = "SELECT distinct(InvoiceNo),Description FROM SavePDFTable where amount <>0 and VendorName='" + VendorNameComboBox.Text +"'";
                 cnn.Open();
 
                 var cmd = new SqlCommand(query, cnn);

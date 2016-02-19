@@ -360,7 +360,7 @@ namespace Groceries_Application.Views
                         }
                         using (var cmdfmt =
                             new SqlCommand(
-                                "insert into PDFFormatTable2 " +
+                                "insert into SavePDFTable " +
                                 "(FileName,InvoiceNo,InvoiceDate,Shipped,Unit,Item,Description,Price,Amount,VendorName)" +
                                 "values(@filename,@invoiceno,@invoicedate,@shipped,@unit,convert(VARCHAR(max), @item),@desc,@price,@amount,@vendorname)",
                                 cnn))
@@ -448,7 +448,9 @@ namespace Groceries_Application.Views
                                 cmdfmt.Parameters.AddWithValue("@invoicedate", tableFormat2.InvoiceDate);
                                 cmdfmt.Parameters.AddWithValue("@shipped", tableFormat2.Shipped);
                                 cmdfmt.Parameters.AddWithValue("@unit", str1);
-                                cmdfmt.Parameters.AddWithValue("@VendorName", "DIPL");
+                                cmdfmt.Parameters.AddWithValue("@vendorname", "DIPL");
+                                cmdfmt.Parameters.AddWithValue("@orderno", "");
+                                cmdfmt.Parameters.AddWithValue("@customername", "");
                                 //cmdfmt.Parameters.AddWithValue("@orderno", "");
                                 //cmdfmt.Parameters.AddWithValue("@customername", "");
                                 switch (list.Count)
@@ -459,14 +461,16 @@ namespace Groceries_Application.Views
                                             cmdfmt.Parameters.AddWithValue("@item", "2PK");
                                             cmdfmt.Parameters.AddWithValue("@desc", "Reena s Pista Kulfi QT(4)");
                                             cmdfmt.Parameters.AddWithValue("@price", list1[2]);
-                                            cmdfmt.Parameters.AddWithValue("@amount", list1[2]);
+                                            tableFormat2.Amount = Double.Parse(list1[2]);
+                                            cmdfmt.Parameters.AddWithValue("@amount", tableFormat2.Amount);
                                         }
                                         else
                                         {
                                             cmdfmt.Parameters.AddWithValue("@item", "2PK");
                                             cmdfmt.Parameters.AddWithValue("@desc", "Reena s Pista Kulfi QT(4)");
                                             cmdfmt.Parameters.AddWithValue("@price", list1[2]);
-                                            cmdfmt.Parameters.AddWithValue("@amount", list1[3]);
+                                            tableFormat2.Amount = Double.Parse(list1[3]);
+                                            cmdfmt.Parameters.AddWithValue("@amount", tableFormat2.Amount);
                                         }
                                         break;
                                     case 4:

@@ -40,14 +40,6 @@ C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\
 C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.Top10RateIncreaseReport.resources
 C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.Top10RateDecreaseReport.resources
 C:\Users\sankararao\Documents\Visual Studio 2013\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.Last2InvoicesReport.resources
-D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.GetVendorItemsReport.resources
-D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.ItemVendorBasedReport.resources
-D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.Last2InvoicesReport.resources
-D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.Top10RateIncreaseReport.resources
-D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.Top10RateDecreaseReport.resources
-D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.VendorReport2.resources
-D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.csproj.GenerateResource.Cache
-D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.csprojResolveAssemblyReference.cache
 D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Groceries_Application.dll.config
 D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Groceries_Application.dll
 D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Groceries_Application.pdb
@@ -83,5 +75,13 @@ D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenA
 D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\DotNetOpenAuth.AspNet.xml
 D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.AspNet.Membership.OpenAuth.xml
 D:\Nageswar\Projects\Groceries_Application\Groceries_Application\bin\Microsoft.AspNet.FriendlyUrls.xml
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.csprojResolveAssemblyReference.cache
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.GetVendorItemsReport.resources
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.ItemVendorBasedReport.resources
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.Last2InvoicesReport.resources
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.Top10RateIncreaseReport.resources
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.Top10RateDecreaseReport.resources
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.Reports.VendorReport2.resources
+D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.csproj.GenerateResource.Cache
 D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.dll
 D:\Nageswar\Projects\Groceries_Application\Groceries_Application\obj\Debug\Groceries_Application.pdb
