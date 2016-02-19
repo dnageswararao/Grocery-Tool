@@ -211,7 +211,7 @@ namespace Groceries_Application.Views
                                     cmd.Parameters.AddWithValue("@invoicedate", tableFormat1.InvoiceDate);
                                     cmd.Parameters.AddWithValue("@orderno", tableFormat1.OrderNumber);
                                     cmd.Parameters.AddWithValue("@customername", tableFormat1.CustomerNumber);
-                                    cmd.Parameters.AddWithValue("@vendorname", "Javed");
+                                    cmd.Parameters.AddWithValue("@vendorname", "SWAD");
                                     if (code1.Split().Length == 2)
                                     {
                                         cmd.Parameters.AddWithValue("@desc",
@@ -448,7 +448,7 @@ namespace Groceries_Application.Views
                                 cmdfmt.Parameters.AddWithValue("@invoicedate", tableFormat2.InvoiceDate);
                                 cmdfmt.Parameters.AddWithValue("@shipped", tableFormat2.Shipped);
                                 cmdfmt.Parameters.AddWithValue("@unit", str1);
-                                cmdfmt.Parameters.AddWithValue("@vendorname", "DIPL");
+                                cmdfmt.Parameters.AddWithValue("@vendorname", "DEEP");
                                 cmdfmt.Parameters.AddWithValue("@orderno", "");
                                 cmdfmt.Parameters.AddWithValue("@customername", "");
                                 //cmdfmt.Parameters.AddWithValue("@orderno", "");

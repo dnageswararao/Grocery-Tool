@@ -4,6 +4,23 @@
 
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
+    <div class="modal fade" id="loader" tabindex=" -1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                             <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                <h4 class="modal-title" id="myModalLabel">Please wait......</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="progress">
+                                          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                    </div>
+                                   </div>
+                             </div>
+                         </div>
+                    </div>
+                </div>
 
 <div class="panel panel-primary pnl">
     <div class="panel-heading">
@@ -99,6 +116,7 @@
         var fromdate = window.$find('<%=FromDatePicker.ClientID %>');
         var todate = window.$find('<%=ToDatePicker.ClientID %>');
         var top10Radio = window.$find('<%=Top10Rate.ClientID %>');
+        var top10RadioDec = window.$find('<%=Top10RateDecrease.ClientID %>');
         var last2Invoices = window.$find('<%=Last2Invoices.ClientID %>');
         var allitems = window.$find('<%=AllItemsRadio.ClientID %>');
         if (vendorcombo._text == "" ) {
@@ -114,6 +132,13 @@
         else if (vendorcombo._text != "" && itemscombo._text != "" && (fromdate._dateInput._displayText != "" || todate._dateInput._displayText == "")) {
             alert('Please select To Date');
         }
+        else if (vendorcombo._text == "" && allitems._checked == true || (fromdate._dateInput._displayText == "" || todate._dateInput._displayText == "") && top10Radio._checked == false && top10RadioDec._checked == false && last2Invoices._checked == false) {
+            alert('Please select From Date and To Date');
+        }
+        else if (vendorcombo._text != "" && allitems._checked == false && (fromdate._dateInput._displayText != "" || todate._dateInput._displayText != "")) {
+            alert('Please select all items');
+        }
+        $('#loader').modal('show');
     });
 </script>
 </asp:Content>

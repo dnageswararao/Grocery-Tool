@@ -25,8 +25,8 @@ namespace Groceries_Application.Views
 
         private void GetVendor()
         {
-            var vendorsList = new List<Vendor> { new Vendor("DIPL"), 
-                                     new Vendor("JAVED")};
+            var vendorsList = new List<Vendor> { new Vendor("DEEP"), 
+                                     new Vendor("SWAD")};
             foreach (var w in vendorsList)
             {
                 VendorNameComboBox.Items.Add(new RadComboBoxItem(w.Name));
@@ -45,7 +45,7 @@ namespace Groceries_Application.Views
             var allitems = AllItemsRadio.Checked;
 
             if (VendorNameComboBox.Text != "" && FromDatePicker.DateInput.DisplayText != "" &&
-                ToDatePicker.DateInput.DisplayText != "" && ItemsComboBox.Text == "")
+                ToDatePicker.DateInput.DisplayText != "" && ItemsComboBox.Text == "" && allitems)
             {
                 ItemsCollection.GetVendorBasedResults(fromdate, todate, vendortextbox);
                 var report1 = ((Report)new VendorReport2());
@@ -104,16 +104,16 @@ namespace Groceries_Application.Views
                 ReportViewer1.RefreshReport();
             }
 
-            else if (allitems && VendorNameComboBox.Text != "")
-            {
-                ItemsCollection.GetVendorAllItems(vendortextbox);
-                var report1 = ((Report)new GetVendorItemsReport());
-                ReportViewer1.ReportSource = new InstanceReportSource { ReportDocument = report1 };
+            //else if (allitems && VendorNameComboBox.Text != "")
+            //{
+            //    ItemsCollection.GetVendorAllItems(vendortextbox);
+            //    var report1 = ((Report)new GetVendorItemsReport());
+            //    ReportViewer1.ReportSource = new InstanceReportSource { ReportDocument = report1 };
 
-                report1.ReportParameters[0].Value = vendortextbox;
+            //    report1.ReportParameters[0].Value = vendortextbox;
 
-                ReportViewer1.RefreshReport();
-            }
+            //    ReportViewer1.RefreshReport();
+            //}
         }
         public IList<ItemsList> ItemsDataCollection { get; set; }
         protected void VendorNameComboBox_OnSelectedIndexChanged(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
@@ -121,7 +121,7 @@ namespace Groceries_Application.Views
             var cnn = DbUtility.GetConnection();
             using (cnn = new SqlConnection(cnn.ConnectionString))
             {
-                var query = "SELECT distinct(InvoiceNo),Description FROM SavePDFTable where amount <>0 and VendorName='" + VendorNameComboBox.Text +"'";
+                var query = "SELECT distinct(Item),Description FROM SavePDFTable where amount <>0 and VendorName='" + VendorNameComboBox.Text +"'";
                 cnn.Open();
 
                 var cmd = new SqlCommand(query, cnn);
@@ -173,6 +173,7 @@ namespace Groceries_Application.Views
             FromDatePicker.SelectedDate = null;
             ItemsComboBox.Text = "";
             ToDatePicker.SelectedDate = null;
+            ReportViewer1.ReportSource = null;
         }
 
         protected void Top10RateDecrease_OnCheckedChanged(object sender, EventArgs e)
@@ -180,13 +181,15 @@ namespace Groceries_Application.Views
             FromDatePicker.SelectedDate = null;
             ItemsComboBox.Text = "";
             ToDatePicker.SelectedDate = null;
+            ReportViewer1.ReportSource = null;
         }
 
         protected void AllItemsRadio_OnCheckedChanged(object sender, EventArgs e)
         {
-            FromDatePicker.SelectedDate = null;
+            //FromDatePicker.SelectedDate = null;
             ItemsComboBox.Text = "";
-            ToDatePicker.SelectedDate = null;
+            //ToDatePicker.SelectedDate = null;
+            ReportViewer1.ReportSource = null;
         }
 
         protected void ResetButton_OnClick(object sender, EventArgs e)
@@ -200,6 +203,7 @@ namespace Groceries_Application.Views
             Top10Rate.Checked = false;
             Last2Invoices.Checked = false;
             AllItemsRadio.Checked = false;
+            ReportViewer1.ReportSource = null;
         }
     }
     public class Vendor

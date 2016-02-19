@@ -53,6 +53,23 @@
                 </div>
                 
                 <div class="progress-bar panel-primary" runat="server">Loading.....</div>
+                
+                <div class="modal fade" id="loader" tabindex=" -1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                             <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                <h4 class="modal-title" id="myModalLabel">Uploading, please wait..........</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                         </div>
+                                      </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
 
                 <div class="panel-collapse" id="action">
                     <div class="panel panel-info">
@@ -117,18 +134,26 @@
         var lblmsg = $('#ContentPlaceHolder1_lblMessage');
         var lbl1 = $('#ContentPlaceHolder1_Label1');
         if (checked1) {
+            
             document.getElementById("table1").style.display = 'block';
             document.getElementById("accordion").style.display = 'block';
             document.getElementById("action").style.display = 'none';
             $('#ContentPlaceHolder1_Label1')[0].textContent = "";
         }
         if (checked2) {
+           
             document.getElementById("table2").style.display = 'block';
             document.getElementById("accordion").style.display = 'none';
             document.getElementById("action").style.display = 'block';
             $('#ContentPlaceHolder1_lblMessage')[0].textContent = "";
         }
 
+        $('#ContentPlaceHolder1_Submit1').on('click', function (parameters) {
+            $('#loader').modal('show');
+        });
+        $('#ContentPlaceHolder1_Submit2').on('click', function (parameters) {
+            $('#loader').modal('show');
+        });
 /* For multiple files Upload Folder*/
         var uploader;
         var inputfile;
