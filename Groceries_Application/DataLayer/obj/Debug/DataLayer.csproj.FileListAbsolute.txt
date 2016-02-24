@@ -7,3 +7,4 @@ D:\Nageswar\Projects\Groceries_Application\DataLayer\bin\Debug\DataLayer.dll
 D:\Nageswar\Projects\Groceries_Application\DataLayer\bin\Debug\DataLayer.pdb
 D:\Nageswar\Projects\Groceries_Application\DataLayer\obj\Debug\DataLayer.dll
 D:\Nageswar\Projects\Groceries_Application\DataLayer\obj\Debug\DataLayer.pdb
+D:\Nageswar\Projects\Groceries_Application\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache

@@ -412,6 +412,59 @@ namespace Groceries_Application.Reports
             }
         }
 
+
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public static double GetPercentageLast2(string vendor, string desctext)
+        {
+            SqlConnection cnn;
+            using (cnn = new SqlConnection(Cnn1.ConnectionString))
+            {
+                var query = "select Top 2 InvoiceNo from SavePDFTable where amount <>0 and VendorName='" + vendor + "' group by invoiceNo,InvoiceDate order by invoicedate desc";
+                cnn.Open();
+                var cmd1 = new SqlCommand(query, cnn);
+                var sda1 = new SqlDataAdapter(cmd1);
+                var ds1 = new DataSet();
+                sda1.Fill(ds1);
+                double percentage = 0;
+                PercentageDataCollection = new List<ItemsList>();
+                for (var i = 0; i < ds1.Tables[0].Rows.Count; i++)
+                {
+                    var query1 =
+                        "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where Description = '" +
+                        desctext + "'" + "and Amount <>0 and VendorName='" + vendor + "'" + " and invoiceno ='" +
+                        ds1.Tables[0].Rows[i].ItemArray[0] + "'order by InvoiceDate desc";
+
+                    var cmd = new SqlCommand(query1, cnn);
+                    var sda = new SqlDataAdapter(cmd);
+                    var ds = new DataSet();
+                    sda.Fill(ds);
+                    
+
+                    var products = (from DataRow dr in ds.Tables[0].Rows select dr.ItemArray).ToList();
+
+                    if (ds.Tables[0].Rows.Count == 0) return percentage;
+                    var d = new ItemsList
+                    {
+                        PercentageValue = Convert.ToDouble(ds.Tables[0].Rows[0].ItemArray[6])
+                    };
+                    PercentageDataCollection.Add(d);
+
+                    if (PercentageDataCollection.Count > 1)
+                    {
+                        var data = PercentageDataCollection.Select(ir => ir.PercentageValue);
+
+                        var inital = data.FirstOrDefault();
+                        var final = data.LastOrDefault();
+
+                        percentage = (final - inital) / inital * 100;
+                        percentage = percentage != 0 ? Convert.ToDouble(percentage.ToString("##.##")) : percentage;
+                    }
+                   
+                }
+                return percentage;
+            }
+        }
+
         [DataObjectMethod(DataObjectMethodType.Select)]
         public static IList<ItemsList> GetTop10Rate(string vendor)
         {
@@ -652,7 +705,7 @@ namespace Groceries_Application.Reports
                 for (var i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
                     var query1 = "SELECT InvoiceNo,InvoiceDate,Item,Description,Unit,Shipped,Price,Amount FROM SavePDFTable where InvoiceNo = '" +
-                          ds.Tables[0].Rows[i].ItemArray[0] + "'" + "and Amount <>0 and VendorName='" + vendortextbox +"'order by InvoiceDate asc";
+                          ds.Tables[0].Rows[i].ItemArray[0] + "'" + "and Amount <>0 and VendorName='" + vendortextbox +"'order by InvoiceDate desc";
                     var cmd1 = new SqlCommand(query1, cnn);
                     var sda1 = new SqlDataAdapter(cmd1);
                     var ds1 = new DataSet();

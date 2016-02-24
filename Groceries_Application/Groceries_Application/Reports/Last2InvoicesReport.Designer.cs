@@ -93,7 +93,7 @@ namespace Groceries_Application.Reports
             // 
             this.textBox23.Format = "{0:MM-dd-yyy}";
             this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.1080822944641113D), Telerik.Reporting.Drawing.Unit.Cm(1.0282939672470093D));
+            this.textBox23.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.4520397186279297D), Telerik.Reporting.Drawing.Unit.Cm(1.0282939672470093D));
             this.textBox23.Style.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(211)))), ((int)(((byte)(235)))));
             this.textBox23.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox23.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -113,7 +113,7 @@ namespace Groceries_Application.Reports
             // textBox25
             // 
             this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.1322920322418213D), Telerik.Reporting.Drawing.Unit.Cm(1.0282939672470093D));
+            this.textBox25.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.4762508869171143D), Telerik.Reporting.Drawing.Unit.Cm(1.0282939672470093D));
             this.textBox25.Style.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(211)))), ((int)(((byte)(235)))));
             this.textBox25.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox25.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -150,10 +150,10 @@ namespace Groceries_Application.Reports
             // 
             // table2
             // 
-            this.table2.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(6.1283535957336426D)));
-            this.table2.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.2910382747650146D)));
-            this.table2.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.1080811023712158D)));
-            this.table2.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.1322927474975586D)));
+            this.table2.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(6.1283526420593262D)));
+            this.table2.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.2910387516021729D)));
+            this.table2.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.4520397186279297D)));
+            this.table2.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Cm(2.4762508869171143D)));
             this.table2.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Cm(0.873914897441864D)));
             this.table2.Body.SetCellContent(0, 0, this.textBox1);
             this.table2.Body.SetCellContent(0, 1, this.textBox2);
@@ -195,11 +195,11 @@ namespace Groceries_Application.Reports
             this.table2.Name = "table2";
             tableGroup9.Groupings.Add(new Telerik.Reporting.Grouping("=Fields.Item"));
             tableGroup9.Name = "DetailGroup";
-            tableGroup9.Sortings.Add(new Telerik.Reporting.Sorting("= Groceries_Application.Reports.ItemsCollection.GetPercentageTop10(Parameters.ven" +
+            tableGroup9.Sortings.Add(new Telerik.Reporting.Sorting("= Groceries_Application.Reports.ItemsCollection.GetPercentageLast2(Parameters.ven" +
             "dortextbox.Value, Fields.Description)", Telerik.Reporting.SortDirection.Desc));
             this.table2.RowGroups.Add(tableGroup9);
             this.table2.RowHeadersPrintOnEveryPage = true;
-            this.table2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(12.659767150878906D), Telerik.Reporting.Drawing.Unit.Cm(1.9022088050842285D));
+            this.table2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(13.347681999206543D), Telerik.Reporting.Drawing.Unit.Cm(1.9022088050842285D));
             this.table2.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
             this.table2.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
             this.table2.Style.BorderStyle.Right = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -249,7 +249,7 @@ namespace Groceries_Application.Reports
             // textBox4
             // 
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.1080822944641113D), Telerik.Reporting.Drawing.Unit.Cm(0.873914897441864D));
+            this.textBox4.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.4520397186279297D), Telerik.Reporting.Drawing.Unit.Cm(0.873914897441864D));
             this.textBox4.Style.BackgroundColor = System.Drawing.Color.White;
             this.textBox4.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox4.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -264,21 +264,21 @@ namespace Groceries_Application.Reports
             this.textBox4.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox4.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox4.StyleName = "";
-            this.textBox4.Value = "= \"$ \" + Fields.Price ";
+            this.textBox4.Value = "= IIf(Fields.Price >= 0,\"$ \" + Fields.Price,\"N/A\") ";
             // 
             // textBox3
             // 
-            formattingRule1.Filters.Add(new Telerik.Reporting.Filter("= Groceries_Application.Reports.ItemsCollection.GetPercentageTop10(Parameters.ven" +
+            formattingRule1.Filters.Add(new Telerik.Reporting.Filter("= Groceries_Application.Reports.ItemsCollection.GetPercentageLast2(Parameters.ven" +
             "dortextbox.Value, Fields.Description)", Telerik.Reporting.FilterOperator.GreaterThan, "0"));
             formattingRule1.Style.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(155)))), ((int)(((byte)(0)))));
-            formattingRule2.Filters.Add(new Telerik.Reporting.Filter("= Groceries_Application.Reports.ItemsCollection.GetPercentageTop10(Parameters.ven" +
+            formattingRule2.Filters.Add(new Telerik.Reporting.Filter("= Groceries_Application.Reports.ItemsCollection.GetPercentageLast2(Parameters.ven" +
             "dortextbox.Value, Fields.Description)", Telerik.Reporting.FilterOperator.LessThan, "0"));
             formattingRule2.Style.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))));
             this.textBox3.ConditionalFormatting.AddRange(new Telerik.Reporting.Drawing.FormattingRule[] {
             formattingRule1,
             formattingRule2});
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.1322920322418213D), Telerik.Reporting.Drawing.Unit.Cm(0.873914897441864D));
+            this.textBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.4762508869171143D), Telerik.Reporting.Drawing.Unit.Cm(0.873914897441864D));
             this.textBox3.Style.BackgroundColor = System.Drawing.Color.White;
             this.textBox3.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox3.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
@@ -293,7 +293,7 @@ namespace Groceries_Application.Reports
             this.textBox3.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox3.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox3.StyleName = "";
-            this.textBox3.Value = "= Groceries_Application.Reports.ItemsCollection.GetPercentageTop10(Parameters.ven" +
+            this.textBox3.Value = "= Groceries_Application.Reports.ItemsCollection.GetPercentageLast2(Parameters.ven" +
     "dortextbox.Value, Fields.Description) + \"%\"";
             // 
             // Last2InvoicesDataSource
